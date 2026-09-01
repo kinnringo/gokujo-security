@@ -137,7 +137,7 @@
       <div id="gokujo-modal-reason">${reason}</div>
       <div id="gokujo-modal-actions">
         <button id="gokujo-modal-proceed">無視して進む</button>
-        <button id="gokujo-modal-back">安全なページに戻る</button>
+        <button id="gokujo-modal-back">前のページに戻る</button>
       </div>
     </div>
   `;
