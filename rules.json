@@ -7,6 +7,13 @@
       "domain": "vscode-download.evil.example",
       "reason": "VSCode偽装フィッシングサイト（テスト用）",
       "added_at": "2026-09-01"
+    },
+    {
+      "type": "blacklist",
+      "id": "bl-0002",
+      "domain": "https://www.amtso.org/feature-settings-check-phishing-page/",
+      "reason": "実在フィッシングテスト用サイト",
+      "added_at": "2026-09-01"
     }
   ]
 }
