@@ -1,0 +1,12 @@
+{
+  "version": "2026-09-01T00:00Z",
+  "rules": [
+    {
+      "type": "blacklist",
+      "id": "bl-0001",
+      "domain": "vscode-download.evil.example",
+      "reason": "VSCode偽装フィッシングサイト（テスト用）",
+      "added_at": "2026-09-01"
+    }
+  ]
+}

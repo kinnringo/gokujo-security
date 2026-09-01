@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Gokujo Security",
+  "version": "0.1.0",
+  "description": "フィッシング・ブランドなりすましサイト検知拡張機能（チーム内利用限定）",
+  "permissions": [
+    "storage",
+    "alarms",
+    "scripting",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["content_scripts/warning_banner.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
