@@ -54,89 +54,63 @@
       position: fixed;
       inset: 0;
       z-index: 2147483646;
-      background: rgba(0, 0, 0, 0.65);
+      background: rgba(0, 0, 0, 0.5);
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: gokujo-fadein 0.2s ease;
-    }
-    @keyframes gokujo-fadein {
-      from { opacity: 0; }
-      to   { opacity: 1; }
     }
     #gokujo-modal {
-      background: #1a1a2e;
-      border: 1px solid #7f1d1d;
-      border-radius: 12px;
-      padding: 36px 40px;
-      max-width: 480px;
-      width: calc(100% - 48px);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.6);
-      font-family: system-ui, sans-serif;
-      color: #f1f5f9;
-      animation: gokujo-slidein 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    @keyframes gokujo-slidein {
-      from { transform: scale(0.88) translateY(16px); opacity: 0; }
-      to   { transform: scale(1) translateY(0);      opacity: 1; }
-    }
-    #gokujo-modal-shield {
-      font-size: 56px;
-      text-align: center;
-      margin-bottom: 16px;
-      filter: drop-shadow(0 0 12px rgba(239,68,68,0.6));
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 24px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      font-family: sans-serif;
+      color: #333;
     }
     #gokujo-modal-title {
-      font-size: 20px;
-      font-weight: 700;
-      color: #ef4444;
-      text-align: center;
-      margin-bottom: 8px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #cc0000;
+      margin-bottom: 12px;
     }
     #gokujo-modal-host {
-      font-size: 13px;
-      text-align: center;
-      color: #94a3b8;
-      margin-bottom: 16px;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 12px;
       word-break: break-all;
     }
     #gokujo-modal-reason {
-      background: rgba(127, 29, 29, 0.3);
-      border-left: 3px solid #ef4444;
-      border-radius: 4px;
-      padding: 10px 14px;
       font-size: 14px;
-      color: #fca5a5;
-      margin-bottom: 28px;
-      line-height: 1.5;
+      margin-bottom: 24px;
     }
     #gokujo-modal-actions {
       display: flex;
-      gap: 12px;
+      justify-content: flex-end;
+      gap: 8px;
     }
     #gokujo-modal-proceed {
-      flex: 1;
-      background: transparent;
-      border: 1px solid #475569;
-      color: #94a3b8;
-      padding: 10px;
-      border-radius: 8px;
+      background: #fff;
+      border: 1px solid #ccc;
+      color: #333;
+      padding: 6px 12px;
+      border-radius: 4px;
       font-size: 14px;
       cursor: pointer;
     }
-    #gokujo-modal-proceed:hover { border-color: #64748b; color: #cbd5e1; }
+    #gokujo-modal-proceed:hover { background: #f0f0f0; }
     #gokujo-modal-back {
-      flex: 2;
-      background: #ef4444;
-      border: none;
+      background: #cc0000;
+      border: 1px solid #cc0000;
       color: #fff;
-      padding: 10px;
-      border-radius: 8px;
+      padding: 6px 12px;
+      border-radius: 4px;
       font-size: 14px;
-      font-weight: 600;
       cursor: pointer;
     }
-    #gokujo-modal-back:hover { background: #dc2626; }
+    #gokujo-modal-back:hover { background: #aa0000; }
   `;
 
   // バナー
@@ -158,13 +132,12 @@
   overlay.id = "gokujo-modal-overlay";
   overlay.innerHTML = `
     <div id="gokujo-modal">
-      <div id="gokujo-modal-shield">🛡️</div>
-      <div id="gokujo-modal-title">フィッシングサイトの疑い</div>
-      <div id="gokujo-modal-host">${host}</div>
+      <div id="gokujo-modal-title">警告：フィッシングサイトの疑い</div>
+      <div id="gokujo-modal-host">アクセス先: ${host}</div>
       <div id="gokujo-modal-reason">${reason}</div>
       <div id="gokujo-modal-actions">
-        <button id="gokujo-modal-proceed">このまま続ける</button>
-        <button id="gokujo-modal-back">← 前のページに戻る</button>
+        <button id="gokujo-modal-proceed">無視して進む</button>
+        <button id="gokujo-modal-back">安全なページに戻る</button>
       </div>
     </div>
   `;
