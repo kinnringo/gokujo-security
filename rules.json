@@ -11,7 +11,7 @@
     {
       "type": "blacklist",
       "id": "bl-0002",
-      "domain": "https://www.amtso.org/feature-settings-check-phishing-page/",
+      "domain": "www.amtso.org",
       "reason": "実在フィッシングテスト用サイト",
       "added_at": "2026-09-01"
     }
