@@ -11,7 +11,7 @@ import { checkBlacklist } from "./detectors/blacklist.js";
 
 const RULES_URL =
   "https://raw.githubusercontent.com/kinnringo/gokujo-security/main/rules.json";
-const STORAGE_KEY = "cachedRules";
+const STORAGE_KEY = "l1_rules";
 const ALARM_NAME = "fetchRules";
 const FETCH_INTERVAL_MINUTES = 360; // 6時間
 
